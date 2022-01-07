@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Condensed:wght@300;700&display=swap');
 
 :root{
-  --red:#5a0a12;
-  --red2:#b8c047;
-  --white:#ffffff;
-  --platinum:#5a5a5a;
-  --mega-title:48px;
-  --title:32px;
-  --normal-text:28px;
-  --small-text:20px;
+    --red:#5a0a12;
+    --red2:#b8c047;
+    --white:#ffffff;
+    --platinum:#5a5a5a;
+    --blue:#264095;
+    --mega-title:48px;
+    --title:32px;
+    --normal-text:28px;
+    --small-text:20px;
 }
 
 body {
-  margin: 10px;
-  font-family: 'Roboto Condensed', sans-serif;
-  background: #000000;
+    margin: 10px;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #000000;
 }
 
 #box{
@@ -27,7 +28,7 @@ body {
     font-size: 2.5rem;
     padding:2rem;
 }
-
+        
 .title{
     text-align: center;
     font-size:var(--mega-title);
@@ -41,9 +42,8 @@ body {
     height: 80vh;
     padding: 1% 0.5%;
     box-sizing: border-box;
-    
 }
-
+        
 .box{
     flex: 1;
     overflow: hidden;
@@ -83,13 +83,14 @@ body {
     gap:40px;
     grid-template-columns: 1.8fr 0.5fr;
 }
+        
 .title2{
     font-size:var(--title);
     font-weight:bold;
 }
 
 .text p{
-    font-size: 18px;
+    font-size: 20px;
     font-family: 'Open Sans', sans-serif;
 }  
 
@@ -113,21 +114,35 @@ body {
     animation: animatedgradient 3s ease alternate infinite;
     background-size: 300% 300%;
 }
-  
-  
+        
 @keyframes animatedgradient {
     0% {
         background-position: 0% 50%;
     }
+            
     50% {
         background-position: 100% 50%;
     }
+            
     100% {
         background-position: 0% 50%;
     }
 }
 
- footer {
+.return{
+    margin: 0 auto;
+    text-align: center;
+    width: 25%;
+    padding:20px;
+    border: 1px solid var(--blue);
+    border-radius:20px;
+    text-decoration: none;
+    font-size: var(--small-text);
+    font-weight: bold;
+    color: var(--blue)
+}
+
+footer {
     margin: auto;
     align-items: center;
     text-align: center;
@@ -135,4 +150,33 @@ body {
     font-family: 'Roboto Condensed', sans-serif;
     color:var(--white);
     margin-bottom:1rem;
-  }
+}
+
+@media (max-width: 640px) {
+    :root{
+        --mega-title:24px;
+        --title:16px;
+        --normal-text:14px;
+        --small-text:10px;
+    }  
+
+    .text p {
+        font-size: 10px;
+    }
+
+    .container{
+        height: 60vh;
+        padding: 0.5% 0.25%
+    }
+
+    .title2{
+        font-size:var(--title);
+        font-weight:bold;
+    }
+
+    .text {
+        display:grid;
+        gap:20px; 
+        grid-template-columns: 1.5fr 0.8fr;
+    }
+}
